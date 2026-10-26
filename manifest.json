@@ -1,0 +1,7 @@
+{"manifest_version":3,"name":"Quarterback","version":"2.0.0","minimum_chrome_version":"116",
+"description":"Google Forms exam monitoring for students.",
+"permissions":["tabs","storage"],"host_permissions":["<all_urls>"],
+"background":{"service_worker":"background.js","type":"module"},
+"action":{"default_title":"Quarterback","default_icon":{"16":"icon16.png","48":"icon48.png"}},
+"icons":{"16":"icon16.png","48":"icon48.png","128":"icon128.png"},
+"content_scripts":[{"matches":["https://docs.google.com/forms/d/e/*/viewform*","https://docs.google.com/forms/d/e/*/formResponse*"],"js":["content.js"],"run_at":"document_idle"}]}
